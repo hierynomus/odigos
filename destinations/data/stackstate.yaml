@@ -1,0 +1,27 @@
+apiVersion: internal.odigos.io/v1beta1
+kind: Destination
+metadata:
+  type: stackstate
+  displayName: StackState
+  category: managed
+spec:
+  image: stackstate.svg
+  signals:
+    traces:
+      supported: true
+    metrics:
+      supported: true
+    logs:
+      supported: true
+  fields:
+    - name: STACKSTATE_URL
+      displayName: Tenant URL
+      componentType: input
+      componentProps:
+        type: text
+    - name: STACKSTATE_API_TOKEN
+      displayName: API Token
+      componentType: input
+      componentProps:
+        type: password
+      secret: true

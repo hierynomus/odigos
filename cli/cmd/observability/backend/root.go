@@ -1,9 +1,10 @@
 package backend
 
 import (
+	"strings"
+
 	"github.com/keyval-dev/odigos/common"
 	"github.com/spf13/cobra"
-	"strings"
 )
 
 type ObservabilityArgs struct {
@@ -18,7 +19,7 @@ type ObservabilityBackend interface {
 }
 
 var (
-	availableBackends = []ObservabilityBackend{&Datadog{}, &Honeycomb{}, &Grafana{},
+	availableBackends = []ObservabilityBackend{&Datadog{}, &StackState{}, &Honeycomb{}, &Grafana{},
 		&NewRelic{}, &LogzIO{}, &Prometheus{}, &Tempo{}, &Loki{}}
 	backendsMap = calcBackendsMap()
 )

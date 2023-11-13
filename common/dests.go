@@ -6,6 +6,7 @@ const (
 	MiddlewareDestinationType    DestinationType = "middleware"
 	GrafanaDestinationType       DestinationType = "grafana"
 	DatadogDestinationType       DestinationType = "datadog"
+	StackStateDestinationType    DestinationType = "stackstate"
 	HoneycombDestinationType     DestinationType = "honeycomb"
 	NewRelicDestinationType      DestinationType = "newrelic"
 	LogzioDestinationType        DestinationType = "logzio"
